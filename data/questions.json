@@ -1,0 +1,77 @@
+[
+    {
+        "question": "What is 3 * 8?",
+        "options": ["27", "31", "24", "26"],
+        "answer-index": "3"
+    },
+    {
+        "question": "What is the Capital City of Canada",
+        "options": ["Toronto", "Ottawa", "Victoria", "Winnipeg"],
+        "answer-index": "2"
+    },
+    {
+        "question": "When was the Declaration of Independence approved by the Second Continental Congress?",
+        "options": ["May 4, 1776", "June 4, 1776", "July 2, 1776", "July 4, 1776"],
+        "answer-index": "4"
+    },
+    {
+        "question": "In past times, what would a gentleman keep in his fob pocket?",
+        "options": ["Watch","Money", "Keys", "Notebook"],
+        "answer-index": "1"
+    },
+    {
+        "question": "How many legs does a spider have?",
+        "options": ["2","4", "7", "8"],
+        "answer-index": "4"
+    },
+    {
+        "question": "A doctor with a PhD is a doctor of what?",
+        "options": ["Psychology", "Philosophy", "Phrenology", "Physical Therapy"],
+        "answer-index": "2"
+    },
+    {
+        "question": "What is the Cowboy's name in Toy Story?",
+        "options": ["Mr.Potato","Rex", "Woody", "Buzz Lightyear"],
+        "answer-index": "3"
+    },
+    {
+        "question": "What temperature does water boil at?",
+        "options": ["100 degrees celcius","50 degrees celcius", "50 degrees fahrenheit", "100 degrees fahrenheit"],
+        "answer-index": "1"
+    },
+    {
+        "question": "What disney movie has the main character Elsa?",
+        "options": ["Mulan","Frozen", "Toy Story", "Lion King"],
+        "answer-index": "2"
+    },
+    {
+        "question": "Who was the creator of Apple?",
+        "options": ["Steve Jobs","Bill Gates", "Yao Ming", "Shaq"],
+        "answer-index": "1"
+    },
+    {
+        "question": "What phone brand is known for being durable and indistructable?",
+        "options": ["Apple","Nokia", "Samsung", "Microsoft"],
+        "answer-index": "2"
+    },
+    {
+        "question": "What does HR stand for?",
+        "options": ["Human Reasoning","Human Reconsideration", "Human Resources", "Hunting Randoms"],
+        "answer-index": "3"
+    },
+    {
+        "question": "Where does Santa Claus live?",
+        "options": ["The North Pole","South Africa", "Canada", "Washinton D.C."],
+        "answer-index": "1"
+    },
+    {
+        "question": "What type of fish is Nemo from Finding Nemo?",
+        "options": ["A sea urchin","A salmon", "A turle", "A clown fish"],
+        "answer-index": "4"
+    },
+    {
+        "question": "What holiday do children go trick-or-treating?",
+        "options": ["Christmas","Halloween", "4th of July", "Saint Patrick's Day"],
+        "answer-index": "2"
+    }
+]
