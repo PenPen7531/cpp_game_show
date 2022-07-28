@@ -93,8 +93,7 @@ int main(){
 
     // Variables
     int count=0;
-    double correct=0;
-    double incorrect=0;
+    
     double average;
     bool play=true;
     bool checkQuestion;
@@ -106,6 +105,8 @@ int main(){
     srand (time(NULL));
     string name=welcome();
     while (play){
+        double correct=0;
+        double incorrect=0;
         cout << "\n\n------------------------------------------------------";
         cout << "\n-                  BEGINNING GAME                   -\n";
         cout << "------------------------------------------------------\n\n";
