@@ -10,19 +10,47 @@
 using namespace std;
 using json = nlohmann::json;
 
+
 string welcome(){
     string name="Player";
-    cout << "Greetings Player. Welcome to our quiz gameshow\nThis quiz will contain 10 randomized questions!\nThe more you get correct the better the prizes you will win!\n";
-    cout << "Before we get started lets get your name.\nWhat is your name (Player): ";
+    cout << "\n\n------------------------------------------------------";
+    cout << "\n-                  GAMESHOW QUIZ                     -\n";
+    cout << "------------------------------------------------------\n\n";
+    cout << "Before we get started let's get your name.\nWhat is your name (Player): ";
+
     getline(cin, name);
     if (name.empty()){
-        cout << "Welcome Player let's begin the game!\n";
+        cout << "\nWelcome Player!\n";
     }
     else{
-        cout << "Welcome " << name << " let's begin the game!\n";
+        cout << "\nWelcome " << name << "!\n";
     }
     return name;
 };
+
+
+void get_rules(){
+    bool rules=true;
+    while (rules){
+        string answer;
+        cout << "Would you like to see the rules?\nAnswer: ";
+        cin >> answer;
+        if (answer=="yes" | answer=="Yes"){
+            cout << "\n\n------------------------------------------------------";
+            cout << "\n-                     RULES                          -\n";
+            cout << "------------------------------------------------------\n\n";
+            cout << "10 Questions\n4 Options\nEnter the number associated with the correct answer.\nThe more correct answers the bigger the prizes!";
+            rules=false;
+        }
+        else if (answer == "no" | answer == "No"){
+            
+            rules=false;
+        }
+        else{
+            cout << "\nSorry. I did not get that. Please try again.\n";
+        }
+    }
+}
 
 string check_answer(){
     bool answerBool=true;
@@ -104,6 +132,7 @@ int main(){
 
     srand (time(NULL));
     string name=welcome();
+    get_rules();
     while (play){
         double correct=0;
         double incorrect=0;
