@@ -14,8 +14,13 @@ string welcome(){
     string name="Player";
     cout << "Greetings Player. Welcome to our quiz gameshow\nThis quiz will contain 10 randomized questions!\nThe more you get correct the better the prizes you will win!\n";
     cout << "Before we get started lets get your name.\nWhat is your name (Player): ";
-    cin >> name;
-    cout << "Welcome " << name << " let's begin the game!\n";
+    getline(cin, name);
+    if (name.empty()){
+        cout << "Welcome Player let's begin the game!\n";
+    }
+    else{
+        cout << "Welcome " << name << " let's begin the game!\n";
+    }
     return name;
 };
 
@@ -57,6 +62,28 @@ bool play_again(){
     };
     return true, 10;
 };
+
+void display_game_over(){
+    cout << "\n\n------------------------------------------------------";
+    cout << "\n-                   GAME OVER                        -\n";
+    cout << "------------------------------------------------------\n\n";
+};
+
+void display_correct(){
+    cout << "\n\n------------------------------------------------------";
+    cout << "\n-                     CORRECT                        -\n";
+    cout << "------------------------------------------------------\n\n";
+}
+
+void display_incorrect(){
+    cout << "\n\n------------------------------------------------------";
+    cout << "\n-                   INCORRECT                        -\n";
+    cout << "------------------------------------------------------\n\n";
+}
+
+void display_status(double correct, double incorrect){
+    cout << "Correct: " << correct << "\nIncorrect: " << incorrect << "\nCorrect %: " << correct/10*100 << "%\n"; 
+}
 
 int main(){
     // Reading json file of questions
@@ -108,29 +135,19 @@ int main(){
             string answer;
             answer=check_answer();
             if (answer==questions[i]["answer-index"]){
-                cout << "\n\n------------------------------------------------------";
-                cout << "\n-                     CORRECT                        -\n";
-                cout << "------------------------------------------------------\n\n";
+                display_correct();
                 correct++;
             }
             else{
-               
-                cout << "\n\n------------------------------------------------------";
-                cout << "\n-                   INCORRECT                        -\n";
-                cout << "------------------------------------------------------\n\n";
+                display_incorrect();
                 incorrect++;
             }
             count++;
         };
-   
-        cout << "\n\n------------------------------------------------------";
-        cout << "\n-                   GAME OVER                        -\n";
-        cout << "------------------------------------------------------\n\n";
-        
-        cout << "Correct: " << correct << "\nIncorrect: " << incorrect << "\nCorrect %: " << correct/10*100 << "%\n"; 
+
+        display_game_over();
+        display_status(correct, incorrect);
         play, count=play_again();
     };
-    
-   
   return 0;
 }
